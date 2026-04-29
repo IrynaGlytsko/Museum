@@ -8,11 +8,19 @@
 </head>
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="header__nav">
                 <div class="header__logo">
-                    <img src="images/logo/logo-header-1920.svg" width="199" height="33" alt="Museum logo" title="Museum logo">
+                    <a href="#header" title="Logo museum Louvre">
+                        <picture>
+                            <source type="image/svg+xml" media="(min-width: 1920px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
+
+                            <source type="image/svg+xml" media="(min-width: 1024px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
+
+                            <img src="images/logo/logo-420.svg" width="131" height="20" alt="Museum logo">
+                        </picture>
+                    </a>
                 </div>
 
                 <ul class="header__list">
@@ -46,10 +54,79 @@
     </header>
 
     <main class="main">
-        <div class="container">
-            <h1>Welcome to the Louvre</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum placeat quibusdam repudiandae. Vel enim dignissimos ducimus, maiores magni placeat accusantium!</p>
-        </div>
+        <section class="content">
+            <div class="container">
+                <div class="content__wrapper">
+                    <div class="content__info">
+                        <h1 class="content__title title">Welcome <br> to the Louvre</h1>
+                        <p class="content__text">From the castle to the museum</p>
+                        <button class="content__button button" type="button">Discover the Louvre</button>
+                    </div>
+                    <div class="content__image">
+                        <picture>
+                            <source type="image/jpg" media="(min-width: 1920px)" srcset="images/bg/bg-image-1920-1x.jpg 1x, images/bg/bg-image-1920-2x.jpg 2x" width="1000" height="750">
+
+                            <source type="image/jpg" media="(min-width: 1024px)" srcset="images/bg/bg-image-1024-1x.jpg 1x, images/bg/bg-image-1024-2x.jpg 2x" width="700" height="525">
+
+                            <source type="image/jpg" media="(min-width: 768px)" srcset="images/bg/bg-image-768-1x.jpg 1x, images/bg/bg-image-768-2x.jpg 2x" width="728" height="546">
+
+                            <img class="content-img" src="images/bg/bg-image-420-1x.jpg" srcset="images/bg/bg-image-420-2x.jpg 2x" loading="lazy" width="380" height="285" alt="Portrait of Mona Lisa" title="Portrait of Mona Lisa">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tours">
+            <div class="container">
+                <h2 class="title title--accent title--bottom-red">Virtual tour</h2>
+                <ul class="tours__list">
+                    <li class="tours__item">
+                        <a class="tours__link" href="#">
+                            <img class="tours__img" src="images/virtual-tour/1920/1-1920-1x.jpg" alt="Column image">
+                        </a>
+                        <h3 class="tours__title tours__title-red">Royal Palace</h3>
+                        <a class="tours__virtual" href="#">
+                            360° Virtual Tour
+                        </a>
+                        <a class="tours__virtual" href="#">
+                            Google Street Panorama View
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="explore">
+            <div class="container">
+                <div class="explore__wrapper">
+                    <div class="explore__info">
+                        <h2 class="title title--bottom-red">Picture explore</h2>
+                        <p class="explore__text">
+                        Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
+                        </p>
+                        <br>
+                        <br>
+                        <p class="explore__text">
+                            It was cleaned in 1984 to remove a "yellow veil" of dust that had gathered since the previous restoration in the 19th century.
+                        </p>
+                        <br>
+                        <p class="explore__text">
+                            The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.
+                        </p>
+                    </div>
+                    <div class="explore__picture">
+                        <img src="images/picture/2-picture-420-1x.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <div class="container">
+                <h2 class="title title--accent">Video journey</h2>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -57,7 +134,15 @@
             <div class="footer__wrapper">
                 <nav class="footer__nav">
                     <div class="footer__logo">
-                        <img src="images/logo/logo-footer-1920.svg" width="195" height="50" alt="Museum logo">
+                        <a href="#header" aria-current="page" title="Logo museum Louvre">
+                            <picture>
+                                <source type="image/svg+xml" media="(min-width: 1920px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
+
+                                <source type="image/svg+xml" media="(min-width: 1040px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
+
+                                <img src="images/logo/logo-420.svg" width="131" height="20" alt="Logo museum Louvre">
+                            </picture>
+                        </a>
                     </div>
                     <ul class="footer__list">
                         <li class="footer__item">
@@ -109,9 +194,9 @@
                 </nav>
 
                 <div class="footer__copy">
-                    <p class="footer__text">© 2021</p>
+                    <p class="footer__text">© 2026</p>
                     <p class="footer__text">The Rolling Scopes School</p>
-                    <p class="footer__text">Username</p>
+                    <p class="footer__text">Hlytsko Iryna</p>
                 </div>
             </div>
         </div>
@@ -119,6 +204,6 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
