@@ -81,7 +81,7 @@
 
     <section class="tours">
       <div class="container">
-        <h2 class="secondary__title title title--accent title--bottom-red">Virtual tour</h2>
+        <h2 class="title-secondary title title--accent title--bottom-red">Virtual tour</h2>
         <ul class="tours__list">
           <li class="tours__item">
             <a class="tours__link" href="#">
@@ -217,7 +217,7 @@
       <div class="container">
         <div class="explore__wrapper">
           <div class="explore__info">
-            <h2 class="explore__title secondary__title title title--bottom-red">Picture explore</h2>
+            <h2 class="explore__title title-secondary title title--bottom-red">Picture explore</h2>
             <p class="explore__text">
             Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
             </p>
@@ -248,7 +248,7 @@
     <section class="video">
       <div class="container">
         <div class="video__description">
-          <h2 class="title secondary__title title--accent">Video journey</h2>
+          <h2 class="title title-secondary title--accent">Video journey</h2>
           <p class="video__text">
             Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
           </p>
@@ -265,7 +265,7 @@
 
     <section class="gallery">
       <div class="container">
-        <h2 class="title secondary__title">Art Gallery</h2>
+        <h2 class="title title-secondary">Art Gallery</h2>
         <div class="gallery__wrapper">
           <ul class="gallery__first">
             <li class="gallery__item">
@@ -287,7 +287,7 @@
 
                 <source type="image/jpg" media="(min-width:768px)" srcset="images/gallery/768/3-768-1x.jpg, images/gallery/768/3-768-2x.jpg 2x" width="352" height="440">
 
-                <img class="gallery__image" loading="lazy" src="images/gallery/420/3-420-1x.jpg" srcset="images/gallery/420-3-420-2x.jpg 2x" width="178" height="223" alt="Mmuseum exhibit">
+                <img class="gallery__image" loading="lazy" src="images/gallery/420/3-420-1x.jpg" srcset="images/gallery/420/3-420-2x.jpg 2x" width="178" height="223" alt="Mmuseum exhibit">
               </picture>
             </li>
             <li class="gallery__item">
@@ -331,7 +331,7 @@
 
                 <source type="image/jpg" media="(min-width:1024px)" srcset="images/gallery/1024/8-1024-1x.jpg, images/gallery/1024/8-1024-2x.jpg 2x" width="304" height="228">
 
-                <source type="image/jpg" media="(min-width:768px)" srcset="images/gallery/768/6-768-1x.jpg, images/gallery/768/6-768x.jpg 2x" width="352" height="440">
+                <source type="image/jpg" media="(min-width:768px)" srcset="images/gallery/768/6-768-1x.jpg, images/gallery/768/6-768-2x.jpg 2x" width="352" height="440">
 
                 <img class="gallery__image" loading="lazy" src="images/gallery/420/5-420-1x.jpg" srcset="images/gallery/420/5-420-2x.jpg 2x" width="178" height="133" alt="Museum exhibit">
               </picture>
@@ -368,23 +368,130 @@
         </div>
       </div>
     </section>
+
+    <section class="tickets">
+      <div class="container">
+        <h2 class="title title--bottom-red title-secondary title--accent">Buy tickets</h2>
+        <div class="tickets__wrapper">
+          <div class="tickets__picture">
+            <picture>
+              <source type="image/jpg" media="(min-width: 1440px)" srcset="images/tickets/1-1920-1x.jpg 1x, images/tickets/1-1920-2x.jpg 2x" width="720" height="550">
+
+              <source type="image/jpg" media="(min-width: 1024px)" srcset="images/tickets/1-1024-1x.jpg 1x, images/tickets/1-1024-2x.jpg 2x" width="700" height="440">
+
+              <source type="image/jpg" media="(min-width: 768px)" srcset="images/tickets/1-768-1x.jpg 1x, images/tickets/1-768-2x.jpg 2x" width="444" height="340">
+
+              <img class="tickets__image" src="images/tickets/1-420-1x.jpg" srcset="images/tickets/1-420-2x.jpg 2x" width="380" height="160" alt="Museum exhibit">
+            </picture>
+          </div>
+
+          <form class="tickets__block" method="post" action="#">
+            <fieldset class="tickets__fieldset">
+              <legend class="tickets__title">Ticket Type</legend>
+              <ul class="tickets__list">
+                <li class="tickets__item">
+                  <label class="tickets__control">
+                    <input class="tickets__control-input" type="radio" value="Permanent exhibition" name="product-group" checked>Permanent exhibition
+                  </label>
+                </li>
+                <li class="tickets__item">
+                  <label class="tickets__control">
+                    <input class="tickets__control-input" type="radio" value="Temporary exhibition" name="product-group">Temporary exhibition
+                  </label>
+                </li>
+                <li class="tickets__item">
+                  <label class="tickets__control">
+                    <input class="tickets__control-input" type="radio" value="Combined Admission" name="product-group">Combined Admission
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="tickets__fieldset">
+              <legend class="tickets__title tickets__title-amount">Amount</legend>
+              <div class="tickets__group">
+                <p class="tickets__info">Basic 18+</p>
+                <div class="tickets__quantity">
+                  <button type="button" id="basic-minus"></button>
+                  <label for="basic-count-input"></label>
+                  <input type="number" id="basic-count-input" value="1" min="1">
+                  <button type="button" id="basic-plus"></button>
+                </div>
+              </div>
+              <div class="tickets__group tickets__group--bottom">
+                <p class="tickets__info">Senior 65+</p>
+                <div class="tickets__quantity">
+                  <button type="button" id="senior-minus"></button>
+                  <label for="senior-count-input"></label>
+                  <input type="number" id="senior-count-input" value="1" min="1">
+                  <button type="button" id="senior-plus"></button>
+                </div>
+              </div>
+
+              <div class="tickets__count">Total €220</div>
+              <button class="button tickets__button" type="submit">Buy Now</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div class="tickets__img">
+        <picture>
+          <source type="image/jpg" media="(min-width: 1440px)" srcset="images/tickets/2-1920-1x.jpg 1x, images/tickets/2-1920-2x.jpg 2x" width="1920" height="400">
+
+          <source type="image/jpg" media="(min-width: 1024px)" srcset="images/tickets/2-1024-1x.jpg 1x, images/tickets/2-1024-2x.jpg 2x" width="1024" height="400">
+
+          <source type="image/jpg" media="(min-width: 768px)" srcset="images/tickets/2-768-1x.jpg 1x, images/tickets/2-768-2x.jpg 2x" width="768" height="300">
+
+          <img class="tickets__pic" src="images/tickets/2-420-1x.jpg" srcset="images/tickets/2-420-2x.jpg 2x" width="420" height="300" alt="Museum exhibit">
+        </picture>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="container">
+        <h2 class="title title--bottom-red title-secondary title--accent">Contacts</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__info">
+            <h3 class="contacts__title">Palais Royal <br> Musee du Louvre</h3>
+            <address class="contacts__address">
+              <p class="contacts__text">address: 75001 Paris, France</p>
+              <p class="contacts__text">phone: +33(0) 1 40 20 50 50</p>
+              <p class="contacts__text">mail: info@louvre.fr</p>
+            </address>
+          </div>
+          <div class="contacts__image">
+            <picture>
+              <source type="image/jpg" media="(min-width: 1440px)" srcset="images/map/1-1920-1x.jpg 1x, images/map/1-1920-2x.jpg 2x" width="960" height="620">
+
+              <source type="image/jpg" media="(min-width: 1024px)" srcset="images/map/1-1024-1x.jpg 1x, images/map/1-1024-2x.jpg 2x" width="694" height="454">
+
+              <source type="image/jpg" media="(min-width: 768px)" srcset="images/map/1-768-1x.jpg 1x, images/map/1-768-2x.jpg 2x" width="728" height="476">
+
+              <img class="contacts__img" src="images/map/1-420-1x.jpg" srcset="images/map/1-420-2x.jpg 2x" width="380" height="248" alt="Map">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__wrapper">
-        <nav class="footer__nav">
-          <div class="footer__logo">
-            <a href="#header" aria-current="page" title="Logo museum Louvre">
-              <picture>
-                <source type="image/svg+xml" media="(min-width: 1920px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
+      <nav class="footer__nav">
+        <div class="footer__logo">
+          <a href="#header" aria-current="page" title="Logo museum Louvre">
+            <picture>
+              <source type="image/svg+xml" media="(min-width: 1920px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
 
-                <source type="image/svg+xml" media="(min-width: 1040px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
+              <source type="image/svg+xml" media="(min-width: 1040px)" srcset="images/logo/logo-1920.svg" width="199" height="33">
 
-                <img src="images/logo/logo-420.svg" width="131" height="20" alt="Logo museum Louvre">
-              </picture>
-            </a>
-          </div>
+              <img src="images/logo/logo-420.svg" width="131" height="20" alt="Logo museum Louvre">
+            </picture>
+          </a>
+        </div>
+
+        <div class="footer__navigation">
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">Visiting</a>
@@ -395,6 +502,9 @@
             <li class="footer__item">
               <a class="footer__link" href="#">Video</a>
             </li>
+          </ul>
+
+          <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">Gallery</a>
             </li>
@@ -405,40 +515,57 @@
               <a class="footer__link" href="#">Contacts</a>
             </li>
           </ul>
-          <div class="footer__social">
-            <div class="footer__social-item">
-              <a class="footer__social-link" href="#">
-                <img src="images/socials/youtube.svg" width="24" height="24" alt="YouTube">
-              </a>
-            </div>
-            <div class="footer__social-item">
-              <a class="footer__social-link" href="#">
-                <img src="images/socials/instagram.svg" width="24" height="24" alt="Instagram">
-              </a>
-            </div>
-            <div class="footer__social-item">
-              <a class="footer__social-link" href="#">
-                <img src="images/socials/facebook.svg" width="24" height="24" alt="Facebook">
-              </a>
-            </div>
-            <div class="footer__social-item">
-              <a class="footer__social-link" href="#">
-                <img src="images/socials/twitter.svg" width="24" height="24" alt="Twitter">
-              </a>
-            </div>
-            <div class="footer__social-item">
-              <a class="footer__social-link" href="#">
-                <img src="images/socials/pinterest.svg" width="24" height="24" alt="Pinterest">
-              </a>
-            </div>
-          </div>
-        </nav>
-
-        <div class="footer__copy">
-          <p class="footer__text">© 2026</p>
-          <p class="footer__text">The Rolling Scopes School</p>
-          <p class="footer__text">Hlytsko Iryna</p>
         </div>
+
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link" title="YouTube" href="#">
+              <picture>
+                <img class="footer__social-image" src="images/socials/youtube.svg" width="24" height="24" alt="YouTube">
+              </picture>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" title="Instagram" href="#">
+              <picture>
+                <img class="footer__social-image" src="images/socials/instagram.svg" width="24" height="24" alt="Instagram">
+              </picture>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" title="Facebook" href="#">
+              <picture>
+                <img class="footer__social-image" src="images/socials/facebook.svg" width="24" height="24" alt="Facebook">
+              </picture>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" title="Twitter" href="#">
+              <picture>
+                <img class="footer__social-image" src="images/socials/twitter.svg" width="24" height="24" alt="Twitter">
+              </picture>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" title="Pinterest" href="#">
+              <picture>
+                <img class="footer__social-image" src="images/socials/pinterest.svg" width="24" height="24" alt="Pinterest">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <hr class="footer__hr">
+
+    <div class="container">
+      <div class="footer__copy">
+        <p class="footer__text">© 2026</p>
+        <p class="footer__text">The Rolling Scopes School</p>
+        <p class="footer__text">
+          <a class="footer__copy-link" href="https://github.com/IrynaGlytsko" title="GitHub">Hlytsko Iryna</a>
+        </p>
       </div>
     </div>
   </footer>
