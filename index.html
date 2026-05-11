@@ -25,30 +25,28 @@
 
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#">Visiting</a>
+            <a class="header__link link-hover link-active" href="#visiting">Visiting</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">Explore</a>
+            <a class="header__link link-hover link-active" href="#explore">Explore</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">Video</a>
+            <a class="header__link link-hover link-active" href="#video">Video</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">Gallery</a>
+            <a class="header__link link-hover link-active" href="#gallery">Gallery</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">Tickets</a>
+            <a class="header__link link-hover link-active" href="#tickets">Tickets</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">Contacts</a>
+            <a class="header__link link-hover link-active" href="#contacts">Contacts</a>
           </li>
         </ul>
 
-        <div class="header__burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button class="burger" id="navToggle" type="button">
+          <span class="burger__item">Menu</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -60,7 +58,7 @@
           <div class="content__info">
             <h1 class="content__title title main__title">Welcome <br> to the Louvre</h1>
             <p class="content__text">From the castle to the museum</p>
-            <button class="content__button button" type="button">Discover the Louvre</button>
+            <button class="content__button button button-hover" type="button">Discover the Louvre</button>
           </div>
           <div class="content__image">
             <picture>
@@ -79,7 +77,7 @@
       </div>
     </section>
 
-    <section class="tours">
+    <section class="tours" id="visiting">
       <div class="container">
         <h2 class="title-secondary title title--accent title--bottom-red">Virtual tour</h2>
         <ul class="tours__list">
@@ -213,7 +211,7 @@
       </div>
     </section>
 
-    <section class="explore">
+    <section class="explore" id="explore">
       <div class="container">
         <div class="explore__wrapper">
           <div class="explore__info">
@@ -229,23 +227,42 @@
             </p>
           </div>
           <div class="explore__picture">
-            <picture>
-              <source type="image/jpg" media="(min-width: 1920px)" srcset="images/picture/1-picture-1920-1x.jpg 1x, images/picture/1-picture-1920-2x.jpg 2x" width="720" height="700">
+            <!-- Изображение "ПОСЛЕ" (нижний слой) -->
+            <div class="image-after">
+              <picture>
+                <source type="image/jpg" media="(min-width: 1024px)" srcset="images/picture/1-picture-1920-1x.jpg 1x, images/picture/1-picture-1920-2x.jpg 2x" width="720" height="700">
 
-              <source type="image/jpg" media="(min-width: 1440px)" srcset="images/picture/1-picture-1920-1x.jpg 1x, images/picture/1-picture-1920-2x.jpg 2x" width="720" height="700">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="images/picture/1-picture-768-1x.jpg 1x, images/picture/1-picture-768-2x.jpg 2x" width="728" height="705">
 
-              <source type="image/jpg" media="(min-width: 1024px)" srcset="images/picture/1-picture-768-1x.jpg 1x, images/picture/1-picture-768-2x.jpg 2x" width="720" height="700">
+                <img src="images/picture/1-picture-420-1x.jpg" srcset="images/picture/1-picture-420-2x.jpg 2x" width="380" height="368" loading="lazy" alt="A picture of a girl being married to a dwarf">
+              </picture>
+            </div>
 
-              <source type="image/jpg" media="(min-width: 768px)" srcset="images/picture/1-picture-768-1x.jpg 1x, images/picture/1-picture-768-2x.jpg 2x" width="728" height="705">
+            <!-- Изображение "ДО" (верхний обрезаемый слой) -->
+            <div class="image-before">
+              <picture>
+                <source type="image/jpg" media="(min-width: 1024px)" srcset="images/picture/2-picture-1920-1x.jpg 1x, images/picture/2-picture-1920-2x.jpg 2x" width="440" height="700">
 
-              <img src="images/picture/1-picture-420-1x.jpg" srcset="images/picture/1-picture-420-2x.jpg 2x" width="380" height="368" loading="lazy" alt="A picture of a girl being married to a dwarf">
-            </picture>
+                <source type="image/jpg" media="(min-width: 768px)" srcset="images/picture/2-picture-768-1x.jpg 1x, images/picture/2-picture-768-2x.jpg 2x" width="441" height="705">
+
+                <img src="images/picture/2-picture-420-1x.jpg" srcset="images/picture/2-picture-420-2x.jpg 2x" width="230" height="368" loading="lazy" alt="A picture of a girl being married to a dwarf">
+              </picture>
+            </div>
+            <!-- Разделитель с кнопкой -->
+            <div class="handle">
+              <div class="handle-button">
+                <span>&#9664;</span>
+                <span>&#9654;</span>
+              </div>
+            </div>
+            <!-- Невидимый ползунок для управления -->
+            <input class="slider-input" type="range" min="0" max="100" value="50">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="video">
+    <section class="video" id="video">
       <div class="container">
         <div class="video__description">
           <h2 class="title title-secondary title--accent">Video journey</h2>
@@ -263,7 +280,7 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <div class="container">
         <h2 class="title title-secondary">Art Gallery</h2>
         <div class="gallery__wrapper">
@@ -369,7 +386,7 @@
       </div>
     </section>
 
-    <section class="tickets">
+    <section class="tickets" id="tickets">
       <div class="container">
         <h2 class="title title--bottom-red title-secondary title--accent">Buy tickets</h2>
         <div class="tickets__wrapper">
@@ -381,12 +398,14 @@
 
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/tickets/1-768-1x.jpg 1x, images/tickets/1-768-2x.jpg 2x" width="444" height="340">
 
+              <source type="image/jpg" media="(min-width: 420px)" srcset="images/tickets/1-768-1x.jpg 1x, images/tickets/1-768-2x.jpg 2x" width="444" height="340">
+
               <img class="tickets__image" src="images/tickets/1-420-1x.jpg" srcset="images/tickets/1-420-2x.jpg 2x" width="380" height="160" alt="Museum exhibit">
             </picture>
           </div>
 
           <form class="tickets__block" method="post" action="#">
-            <fieldset class="tickets__fieldset">
+            <fieldset class="tickets__fieldset tickets__fieldset-type">
               <legend class="tickets__title">Ticket Type</legend>
               <ul class="tickets__list">
                 <li class="tickets__item">
@@ -407,7 +426,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="tickets__fieldset">
+            <fieldset class="tickets__fieldset tickets__fieldset-amount">
               <legend class="tickets__title tickets__title-amount">Amount</legend>
               <div class="tickets__group">
                 <p class="tickets__info">Basic 18+</p>
@@ -429,7 +448,7 @@
               </div>
 
               <div class="tickets__count">Total €220</div>
-              <button class="button tickets__button" type="submit">Buy Now</button>
+              <button class="button tickets__button button-hover" type="submit">Buy Now</button>
             </fieldset>
           </form>
         </div>
@@ -448,7 +467,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <h2 class="title title--bottom-red title-secondary title--accent">Contacts</h2>
         <div class="contacts__wrapper">
@@ -494,25 +513,25 @@
         <div class="footer__navigation">
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="#">Visiting</a>
+              <a class="footer__link link-hover link-active" href="#visiting">Visiting</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Explore</a>
+              <a class="footer__link link-hover link-active" href="#explore">Explore</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Video</a>
+              <a class="footer__link link-hover link-active" href="#video">Video</a>
             </li>
           </ul>
 
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="#">Gallery</a>
+              <a class="footer__link link-hover link-active" href="#gallery">Gallery</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Tickets</a>
+              <a class="footer__link link-hover link-active" href="#tickets">Tickets</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Contacts</a>
+              <a class="footer__link link-hover link-active" href="#contacts">Contacts</a>
             </li>
           </ul>
         </div>
@@ -564,7 +583,7 @@
         <p class="footer__text">© 2026</p>
         <p class="footer__text">The Rolling Scopes School</p>
         <p class="footer__text">
-          <a class="footer__copy-link" href="https://github.com/IrynaGlytsko" title="GitHub">Hlytsko Iryna</a>
+          <a class="footer__copy-link link-hover link-active" href="https://github.com/IrynaGlytsko" title="GitHub">Hlytsko Iryna</a>
         </p>
       </div>
     </div>
